@@ -5,5 +5,4 @@ def countstrings(stringlist):
             count += 1
     return count
 
-words = ["aba", "xyz", "timothy", "jayden", "madam", "aaa", "xyx"]
-print(f"Numbers of string are: {countstrings(words)}")
+
