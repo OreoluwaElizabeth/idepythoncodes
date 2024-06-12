@@ -155,22 +155,5 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(set_length(set1), 1)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     unittest.main()

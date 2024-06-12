@@ -55,4 +55,42 @@ def smallest_elements(numbers):
             smallest_elements = num
     return smallest_elements
 
+def generate_random_tuple(length):
+    random.seed(15)
+    my_tuple = []
+    for count in range(length):
+        my_tuple.append(random.randint(1, 20))
+    return tuple(my_tuple)
+
+def sum_odd_positions(numbers):
+    total = 0
+    for count, num in enumerate(numbers):
+        if count % 2 != 0:
+            total += num
+    return total
+
+def sum_even_positions(numbers):
+    total = 0
+    for count, num in enumerate(numbers):
+        if count % 2 == 0:
+            total += num
+    return total
+
+def sum_smallest_largest(numbers):
+    smallest = numbers[0]
+    largest = numbers[0]
+    for num in numbers:
+        if num < smallest:
+            smallest = num
+        elif num > largest:
+            largest = num
+    return smallest + largest
+
+def unpack_first_five_elements(numbers):
+    a, b, c, d, e = numbers[:5]
+    return a, b, c, d, e
+
+
+
+
 
