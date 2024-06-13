@@ -90,6 +90,21 @@ def unpack_first_five_elements(numbers):
     a, b, c, d, e = numbers[:5]
     return a, b, c, d, e
 
+def students_data():
+    students = {}
+    for count in range(1, 11):
+        name = f"Student_{count}"
+        age = count + 9
+        students[name] = age
+    return students
+
+def sort_student(students):
+    sorted_students = dict(sorted(students.items()))
+    return sorted_students
+
+
+
+
 
 
 

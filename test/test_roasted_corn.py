@@ -2,7 +2,7 @@ import unittest
 import random
 
 from birthdaySnacks.roasted_corn import generate_numbers, generate_random_tuple, sum_odd_positions, sum_even_positions, \
-    sum_smallest_largest, unpack_first_five_elements
+    sum_smallest_largest, unpack_first_five_elements, students_data
 from birthdaySnacks.roasted_corn import count_numbers
 from birthdaySnacks.roasted_corn import sum_even_numbers
 from birthdaySnacks.roasted_corn import odd_even_numbers
@@ -83,8 +83,24 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(d, 4)
         self.assertEqual(e, 5)
 
+    def test_students_data(self):
+        students = students_data()
+        self.assertEqual(len(students), 10)
+        for count in range(1, 11):
+            name = f"Student_{count}"
+            self.assertIn(name, students)
+            self.assertEqual(students[name], count + 9)
 
-
+    def test_sort_student(self):
+        students = {
+            "Student_3": 12,
+            "Student_1": 10,
+            "Student_2": 11,
+            "Student_5": 15,
+            "Student_4": 14
+        }
+        sorted_students = sort_student(students)
+        self.assertEqual(list(sorted_students.keys()), ["Student_1", "Student_2", "Student_3", "Student_4", "Student_5"])
 
 
 if __name__ == '__main__':
